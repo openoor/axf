@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extCSS %}
+    <link rel="stylesheet" href="{% static 'app/user/register.css' %}">
+{% endblock %}
+{% block extJS %}
+    <script src="{% static 'js/md5.js' %}"></script>
+    <script src="{% static 'app/user/register.js' %}"></script>
+
+{% endblock %}
+{% block title %}
+    注册
+{% endblock %}
+{% block header %}
+    <header>
+        <div>注册</div>
+    </header>
+{% endblock %}
+{% block content %}
+    <div class="container">
+        <form method="post" action="{% url 'App:register_handle'  %}" enctype='multipart/form-data'>
+            {% csrf_token %}
+            <div class="form-group">
+                <label>用户名</label>
+                <input type="text" class="form-control" name="username" id="username" placeholder="6-18位的数字字母下划线,不能以数字开头">
+                <p class="error" id="erroruser">*用户不合法</p>
+                <p id="msg"></p>
+            </div>
+
+            <div class="form-group">
+                <label>密码</label>
+                <input type="password" class="form-control" name="password" id="password" placeholder="8位以上字符">
+                <p class="error" id="errorpw1">*密码不合法</p>
+            </div>
+            <div class="form-group">
+                <label>确认密码</label>
+                <input type="password" class="form-control" id="again" placeholder="请再次输入密码">
+                <p class="error" id="errorpw2">*两次密码不一致</p>
+            </div>
+            <div class="form-group">
+                <label>邮箱</label>
+                <input type="email" class="form-control" name="email" id="email" placeholder="请输入合法的邮箱">
+                <p class="error" id="errorem">*邮箱不合法</p>
+            </div>
+            <div class="form-group">
+                <label>头像</label>
+                <input type="file" id="icon" name="icon">
+            </div>
+            <button id="register" type="submit" class="btn btn-success">注册</button>
+        </form>
+    </div>
+
+{% endblock %}

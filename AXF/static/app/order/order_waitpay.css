@@ -1,0 +1,38 @@
+header{
+    width: 100%;
+    height: 1.5rem;
+    background: orange;
+    font-size: 0.7rem;
+    margin-bottom: 0.2rem;
+}
+header div{
+    width: 100%;
+    text-align: center;
+    color: white;
+    line-height: 1.5rem;
+    position: absolute;
+}
+header a {
+    position: absolute;
+    width: 1.5rem;
+    height: 0.5rem;
+    top: 0.5rem;
+    /*z-index: 2;*/
+}
+.orders > li{
+    width: 100%;
+    height: 160px;
+    border:1px solid orange;
+    padding: 1px;
+    margin: 10px;
+}
+.ordergoods li{
+    width: 80px;
+    height: 80px;
+    border:1px solid orange;
+    float: left;
+}
+ul li img{
+    width:76px;
+    height: 76px;
+}

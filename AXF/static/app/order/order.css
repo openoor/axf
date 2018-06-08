@@ -1,0 +1,37 @@
+header{
+    width: 100%;
+    height: 1.5rem;
+    background: orange;
+    font-size: 0.7rem;
+    margin-bottom: 0.2rem;
+}
+header div{
+    width: 100%;
+    text-align: center;
+    color: white;
+    line-height: 1.5rem;
+    position: absolute;
+}
+header a{
+    position: absolute;
+    width: 1.5rem;
+    height: 0.5rem;
+    top: 0.5rem;
+    /*z-index: 2;*/
+}
+button{
+    width: 9rem;
+}
+
+ul li{
+    width: 100px;
+    height: 100px;
+    float: left;
+    border:1px solid orange;
+    padding: 3px;
+    margin: 10px;
+}
+ul li img{
+    width:100%;
+    height: 100%;
+}
